@@ -1,0 +1,47 @@
+20:47:11 **** Incremental Build of configuration Debug for project Door_Locker_Security_System_MC2 ****
+make all 
+Building file: ../CONTROL_ECU.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"CONTROL_ECU.d" -MT"CONTROL_ECU.o" -c -o "CONTROL_ECU.o" "../CONTROL_ECU.c"
+In file included from ../CONTROL_ECU.c:8:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../CONTROL_ECU.c
+ 
+Building file: ../dc_motor.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"dc_motor.d" -MT"dc_motor.o" -c -o "dc_motor.o" "../dc_motor.c"
+Finished building: ../dc_motor.c
+ 
+Building file: ../timer.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"timer.d" -MT"timer.o" -c -o "timer.o" "../timer.c"
+../timer.c: In function 'Timer0_setCallBack':
+../timer.c:106: warning: function return types not compatible due to 'volatile'
+../timer.c: In function 'Timer1_setCallBack':
+../timer.c:241: warning: function return types not compatible due to 'volatile'
+Finished building: ../timer.c
+ 
+Building target: Door_Locker_Security_System_MC2.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Door_Locker_Security_System_MC2.map -mmcu=atmega32 -o "Door_Locker_Security_System_MC2.elf"  ./CONTROL_ECU.o ./buzzer.o ./dc_motor.o ./external_eeprom.o ./gpio.o ./timer.o ./twi.o ./uart.o   
+Finished building target: Door_Locker_Security_System_MC2.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Door_Locker_Security_System_MC2.elf  >"Door_Locker_Security_System_MC2.lss"
+Finished building: Door_Locker_Security_System_MC2.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Door_Locker_Security_System_MC2.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9972 bytes (30.4% Full)
+(.text + .data + .bootloader)
+
+Data:         35 bytes (1.7% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 

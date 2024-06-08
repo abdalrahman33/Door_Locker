@@ -1,0 +1,17 @@
+/*
+ * CONTROL_ECU.C
+ *
+ *  Created on: Nov 5, 2022
+ *      Author: Omar Eltoutongy
+ */
+
+#include "dc_motor.h"
+#include "buzzer.h"
+#include "twi.h"
+#include "uart.h"
+#include "std_types.h"
+#include "timer.h"
+#include "external_eeprom.h"
+#include <avr/io.h>
+#include<util/delay.h>
+
